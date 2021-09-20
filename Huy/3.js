@@ -7,8 +7,7 @@ $(document).ready(function () {
                 || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
                 alert("Left most vowel of " + str + " is at location " + (i + 1));
                 return;
-            }// Hàm xử lý chữ cái, tìm kiếm vị trí các nguyên âm u e o a i trong 1 từ, 
-            // dùng vòng lặp for để duyệt chuỗi và trả về vị trí nguyên âm đầu tiên kiếm được.
+            }
         }
         alert("No vowels found for string " + str);
     });
@@ -25,8 +24,7 @@ $(document).ready(function () {
             rnum *= 10;
             rnum += num % 10;
             num -= num % 10;
-            num = Math.floor(num / 10);// Dùng để làm tròn số nguyên gần nhất
-            // Vòng lặp dùng để đảo vị trí của các số 
+            num = Math.floor(num / 10);
         }
         alert("Reverse of num " + temp + " is " + rnum);
     })
@@ -36,7 +34,7 @@ function f(d) {
     if (d == 'c') {
         $("#res").val("");
         return;
-    }//  Xử lý xóa hết các kí tự đã nhập vào ô có Id là res
+    }
     res = $("#res").val();
     if (res == 0 && d == 0)
         return;// Kiếm tra nếu res = 0 và giá trị nhập vô = 0
@@ -45,13 +43,13 @@ function f(d) {
         num = parseFloat(res);
         $("#res").val(d);
         return;
-    }// Hàm lưu các phép tính và giá trị đã nhập
+    }
     if (d == '=') {
         num1 = parseFloat(res);
         switch (opr) {
             case '+': ans = num + num1; break;
             case '-': ans = num - num1; break;
-            case '*': ans = num * num1; break;// Hàm thực hiện các phép toán
+            case '*': ans = num * num1; break;
             case '/': ans = parseInt(num / num1); break;
         }
         $("#res").val(ans);
